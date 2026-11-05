@@ -21,10 +21,10 @@ def read_current_user(current_user:User=Depends(get_current_user)):
         "role":current_user.role.value
     }
 
-@app.get("/admin/test")
-def test_admin_access(current_admin:User=Depends(get_current_admin)):
-    return {
-        "message":"Admin access granted",
-        "email":current_admin.email,
-        "role":current_admin.role.value
-    }
+# @app.get("/admin/test")
+# def test_admin_access(current_admin:User=Depends(get_current_admin)):
+#     return {
+#         "message":"Admin access granted",
+#         "email":current_admin.email,
+#         "role":current_admin.role.value
+#     }
